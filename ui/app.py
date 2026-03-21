@@ -1,10 +1,5 @@
-"""
-스마트스토어 대표이미지 자동 생성 — Streamlit UI
-
-실행:
-  cd C:\Users\Admin\Desktop\Thumbnail
-  streamlit run ui/app.py
-"""
+# 스마트스토어 대표이미지 자동 생성 - Streamlit UI
+# 실행: streamlit run ui/app.py
 
 import asyncio
 import io
