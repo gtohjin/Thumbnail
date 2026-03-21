@@ -1,0 +1,84 @@
+{
+  "id": "smartstore_default",
+  "name": "스마트스토어 기본 대표이미지",
+  "category": "smartstore",
+  "canvas_size": 1024,
+  "global_negative_prompt": "text, watermark, logo, banner, multiple products, collage, blurry, low quality, distorted, extra objects, busy background, cluttered, advertisement style, price tag, discount sticker, border, frame",
+  "presets": [
+    {
+      "id": "preset_01_white_basic",
+      "name": "화이트 배경 기본형",
+      "description": "순백의 배경에 상품을 명확하게 표현하는 기본형. 가장 범용적이며 스마트스토어 기본 기준에 적합.",
+      "template": "Professional product photography of {product} on a clean {background} background, centered composition, studio lighting, {shadow} shadow, {spacing} margins, minimalist e-commerce style, high detail, sharp focus, product catalog quality",
+      "style_tags": ["clean", "minimal", "studio"],
+      "variation_schema": {
+        "background": ["pure white", "off-white", "clean white"],
+        "shadow": ["no", "very soft drop", "soft natural drop"],
+        "angle": ["straight front view", "slightly elevated front view"],
+        "spacing": ["standard centered", "generous centered"],
+        "prop": ["none", "none", "none"]
+      },
+      "weight": 1.2
+    },
+    {
+      "id": "preset_02_soft_shadow",
+      "name": "소프트 그림자형",
+      "description": "자연스러운 그림자로 입체감을 강조. 상품에 depth감을 부여해 실물감 향상.",
+      "template": "Product photography of {product} with {shadow} on {background} surface, {angle} perspective, soft natural lighting from upper-left, clean minimal background, {spacing} composition, commercial photography quality, product identity clear",
+      "style_tags": ["depth", "natural", "commercial"],
+      "variation_schema": {
+        "background": ["light gray", "warm white", "cool white"],
+        "shadow": ["natural soft shadow", "gentle drop shadow", "diffused contact shadow"],
+        "angle": ["front view", "slight 3/4 view"],
+        "spacing": ["balanced centered", "standard centered"],
+        "prop": ["none", "none"]
+      },
+      "weight": 1.0
+    },
+    {
+      "id": "preset_03_premium_minimal",
+      "name": "프리미엄 미니멀형",
+      "description": "고급스럽고 절제된 미니멀 스타일. 여백을 넓게 활용해 프리미엄 브랜드 톤 구현.",
+      "template": "Premium product showcase of {product}, {background} backdrop, {angle} perspective, {prop}, luxury minimalist composition, high-end commercial photography, precise controlled lighting, {spacing} negative space, editorial quality, brand identity",
+      "style_tags": ["premium", "luxury", "editorial"],
+      "variation_schema": {
+        "background": ["light beige", "warm gray", "pale cream"],
+        "shadow": ["barely visible shadow", "subtle ambient shadow"],
+        "angle": ["straight front", "slightly elevated"],
+        "spacing": ["wide negative space", "very wide margins"],
+        "prop": ["none", "simple white platform", "clean acrylic surface"]
+      },
+      "weight": 1.0
+    },
+    {
+      "id": "preset_04_lifestyle_minimal",
+      "name": "감성 배경 최소형",
+      "description": "라이프스타일 감성을 최소한으로 연출. 텍스처 배경을 활용해 따뜻한 분위기 연출.",
+      "template": "Lifestyle product photography of {product}, {background} context, {angle}, {prop}, warm natural lighting, clean and airy composition, {spacing} framing, modern minimal aesthetic, inviting atmosphere, high quality detail",
+      "style_tags": ["lifestyle", "airy", "warm"],
+      "variation_schema": {
+        "background": ["soft linen texture", "minimal light wood surface", "clean light marble"],
+        "shadow": ["soft natural ambient", "warm ambient light"],
+        "angle": ["front view", "slight overhead view"],
+        "spacing": ["natural balanced", "relaxed composition"],
+        "prop": ["none", "simple neutral fabric", "single minimal element"]
+      },
+      "weight": 0.9
+    },
+    {
+      "id": "preset_05_display_stand",
+      "name": "디스플레이 스탠드형",
+      "description": "받침대나 스탠드를 활용한 구조적 연출. 상품이 돋보이는 깔끔한 카탈로그 스타일.",
+      "template": "Clean product display of {product} positioned on {prop}, {background} background, {angle} camera angle, professional studio lighting, {shadow} shadow effect, {spacing} composition, sharp product detail, clean catalog photography style",
+      "style_tags": ["display", "catalog", "structured"],
+      "variation_schema": {
+        "background": ["white", "light neutral gray", "soft gray"],
+        "shadow": ["clean drop shadow", "soft reflection", "minimal contact shadow"],
+        "angle": ["eye level front", "slightly above eye level"],
+        "spacing": ["tight centered", "standard centered"],
+        "prop": ["transparent acrylic stand", "white pedestal", "minimal white riser"]
+      },
+      "weight": 0.9
+    }
+  ]
+}
