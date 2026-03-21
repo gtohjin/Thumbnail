@@ -3,17 +3,20 @@
 
 import asyncio
 import io
+import os
 import sys
 import tempfile
 from pathlib import Path
 
+# 프로젝트 루트를 sys.path 맨 앞에 강제 삽입 (streamlit이 ui/ 를 먼저 추가하는 문제 방지)
+ROOT = Path(__file__).resolve().parent.parent
+os.chdir(ROOT)
+if str(ROOT) in sys.path:
+    sys.path.remove(str(ROOT))
+sys.path.insert(0, str(ROOT))
+
 import streamlit as st
 from PIL import Image
-
-# 프로젝트 루트를 sys.path에 추가
-ROOT = Path(__file__).parent.parent
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
 
 from dotenv import load_dotenv
 load_dotenv(ROOT / ".env")
