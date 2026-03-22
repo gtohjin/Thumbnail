@@ -140,7 +140,15 @@ if st.session_state.page == "generate":
         st.subheader("⚙️ 4. 생성 설정")
         count = st.slider("생성 수량", 5, 30, 20)
         top_n = st.slider("상위 선별 수", 3, 10, 5)
-        provider_name = st.selectbox("Provider", ["openai", "stability"])
+        provider_name = st.selectbox(
+            "Provider",
+            ["gemini", "openai", "stability"],
+            format_func=lambda x: {
+                "gemini": "🍌 Gemini (나노바나나 AI)",
+                "openai": "🤖 OpenAI DALL-E",
+                "stability": "🎨 Stability AI",
+            }.get(x, x),
+        )
 
         st.markdown("---")
         can_generate = bool(uploaded_file and product_desc and preset_id)

@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     # API Keys
     openai_api_key: str = Field(default="", alias="OPENAI_API_KEY")
     stability_api_key: str = Field(default="", alias="STABILITY_API_KEY")
+    gemini_api_key: str = Field(default="", alias="GEMINI_API_KEY")
 
     # Provider
     default_provider: str = Field(default="openai", alias="DEFAULT_PROVIDER")
