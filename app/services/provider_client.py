@@ -164,7 +164,7 @@ class GeminiProvider(BaseImageProvider):
     - 동기 SDK를 asyncio executor로 래핑해 비동기 호환
     """
 
-    MODEL = "gemini-2.5-flash-image"
+    MODEL = "gemini-3.1-flash-image-preview"
 
     def __init__(self, api_key: str = None):
         self.api_key = api_key or settings.gemini_api_key
